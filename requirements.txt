@@ -1,19 +1,17 @@
 streamlit
 
+torch
 transformers
+accelerate
 
 sentence-transformers
 
 langchain
-
 langchain-community
-
 langchain-huggingface
-
-pandas
-
-numpy
+langchain-text-splitters
 
 faiss-cpu
 
-torch
+pandas
+numpy
