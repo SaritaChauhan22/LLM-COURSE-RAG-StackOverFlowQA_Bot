@@ -1,17 +1,15 @@
-streamlit
+streamlit==1.37.1
 
-langchain
-langchain-community
-langchain-core
-langchain-text-splitters
-langchain-huggingface
+torch==2.5.1
+transformers==4.46.3
+accelerate==1.1.1
 
-transformers
-torch
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-huggingface==0.1.2
 
-sentence-transformers
-faiss-cpu
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
 
-pandas
-numpy
-accelerate
+pandas==2.2.3
+numpy==1.26.4

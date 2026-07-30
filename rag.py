@@ -42,9 +42,9 @@ class RAGChatbot:
 
         # LLM
         pipe = pipeline(
-            task="text2text-generation",
+            "text2text-generation",
             model=LLM_MODEL,
-            max_length=512
+            max_length=256
         )
 
 
