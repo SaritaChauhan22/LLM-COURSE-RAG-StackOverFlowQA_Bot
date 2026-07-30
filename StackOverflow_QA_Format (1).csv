@@ -1,0 +1,341 @@
+Question,Answer
+How do I reverse an array in Java?,"Tags: java,arrays
+
+This answer explains: How do I reverse an array in Java?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+How do I rename a Git branch?,"Tags: git,branch
+
+This answer explains: How do I rename a Git branch?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+What is a NullPointerException?,"Tags: java,nullpointerexception
+
+This answer explains: What is a NullPointerException?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+How do I sort a list in Java?,"Tags: java,collections
+
+This answer explains: How do I sort a list in Java?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+Difference between HashMap and Hashtable?,"Tags: java,hashmap
+
+This answer explains: Difference between HashMap and Hashtable?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+What is JVM?,"Tags: java,jvm
+
+This answer explains: What is JVM?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+What is JDK vs JRE?,"Tags: java,jdk
+
+This answer explains: What is JDK vs JRE?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+How to read a CSV in Python?,"Tags: python,csv
+
+This answer explains: How to read a CSV in Python?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+What is list comprehension?,"Tags: python,list
+
+This answer explains: What is list comprehension?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+How to join two tables in SQL?,"Tags: sql,join
+
+This answer explains: How to join two tables in SQL?.
+Use the standard approach recommended by the language or framework. Follow best practices, validate inputs, handle errors appropriately, and test your implementation.
+
+Example:
+// Refer to official documentation for syntax and production-ready usage."
+How to join two tables in SQL? (Variant 11),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 12),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 13),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 14),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 15),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 16),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 17),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 18),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 19),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 20),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 21),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 22),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 23),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 24),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 25),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 26),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 27),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 28),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 29),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 30),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 31),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 32),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 33),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 34),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 35),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 36),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 37),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 38),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 39),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 40),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 41),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 42),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 43),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 44),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 45),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 46),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 47),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 48),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 49),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 50),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 51),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 52),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 53),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 54),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 55),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 56),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 57),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 58),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 59),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 60),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 61),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 62),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 63),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 64),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 65),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 66),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 67),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 68),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 69),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 70),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 71),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 72),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 73),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 74),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 75),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 76),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 77),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 78),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 79),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 80),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 81),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 82),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 83),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 84),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 85),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 86),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 87),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 88),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 89),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 90),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to join two tables in SQL? (Variant 91),"Tags: sql,join
+
+This is a detailed sample answer for 'How to join two tables in SQL?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I reverse an array in Java? (Variant 92),"Tags: java,arrays
+
+This is a detailed sample answer for 'How do I reverse an array in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I rename a Git branch? (Variant 93),"Tags: git,branch
+
+This is a detailed sample answer for 'How do I rename a Git branch?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is a NullPointerException? (Variant 94),"Tags: java,nullpointerexception
+
+This is a detailed sample answer for 'What is a NullPointerException?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How do I sort a list in Java? (Variant 95),"Tags: java,collections
+
+This is a detailed sample answer for 'How do I sort a list in Java?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+Difference between HashMap and Hashtable? (Variant 96),"Tags: java,hashmap
+
+This is a detailed sample answer for 'Difference between HashMap and Hashtable?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JVM? (Variant 97),"Tags: java,jvm
+
+This is a detailed sample answer for 'What is JVM?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is JDK vs JRE? (Variant 98),"Tags: java,jdk
+
+This is a detailed sample answer for 'What is JDK vs JRE?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+How to read a CSV in Python? (Variant 99),"Tags: python,csv
+
+This is a detailed sample answer for 'How to read a CSV in Python?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."
+What is list comprehension? (Variant 100),"Tags: python,list
+
+This is a detailed sample answer for 'What is list comprehension?'. Explain the concept, provide steps, discuss complexity where applicable, include an example code snippet, and mention best practices."

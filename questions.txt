@@ -1,0 +1,190 @@
+# 1. Java Questions
+What is JVM?
+What is JDK?
+What is the difference between JDK and JRE?
+What is a NullPointerException?
+How do I reverse an array in Java?
+How do I sort an ArrayList?
+Difference between HashMap and Hashtable?
+Difference between HashMap and TreeMap?
+How do I read a file in Java?
+How do I create a thread in Java?
+
+# 2. Python Questions
+How do I read a CSV file in Python?
+What is list comprehension?
+Difference between list and tuple?
+How do I install a package using pip?
+How do I reverse a list in Python?
+How do I handle exceptions in Python?
+What is a lambda function?
+How do I read a JSON file?
+How do I create a virtual environment?
+Difference between NumPy and Pandas?
+
+# 3. SQL Question
+How do I join two tables?
+Difference between INNER JOIN and LEFT JOIN?
+What is GROUP BY?
+What is HAVING clause?
+Difference between DELETE, TRUNCATE and DROP?
+How do I find duplicate records?
+What are window functions?
+Difference between WHERE and HAVING?
+How do I create an index?
+What is a primary key?
+
+# 4. Git Questions
+How do I rename a Git branch?
+How do I delete a branch?
+How do I merge branches?
+How do I undo a commit?
+Difference between git pull and git fetch?
+How do I clone a repository?
+How do I resolve merge conflicts?
+What is Git rebase?
+How do I create a new branch?
+How do I push to GitHub?
+
+# 5. HTML/CSS Questions
+What is Flexbox?
+What is CSS Grid?
+Difference between id and class?
+How do I center a div?
+What is semantic HTML?
+How do I create a responsive website?
+Difference between inline and block elements?
+How do I add external CSS?
+What is z-index?
+How do I use media queries?
+
+# 6. JavaScript Questions
+What is JavaScript hoisting?
+Difference between let, var and const?
+What is event bubbling?
+What are promises?
+Difference between == and ===?
+What is async await?
+How do I fetch API data?
+What is closure?
+What is callback function?
+What is DOM?
+
+# 7. React Questions
+What is React?
+What are React Hooks?
+What is useState?
+What is useEffect?
+Difference between props and state?
+How do I pass data between components?
+What is JSX?
+What is Virtual DOM?
+What are controlled components?
+What is React Router?
+
+# 8. Spring Boot Questions
+What is Spring Boot?
+What is dependency injection?
+What is @Autowired?
+Difference between @Component and @Service?
+What is REST API?
+How do I connect MySQL with Spring Boot?
+What is Spring Security?
+How do I create CRUD APIs?
+What is Hibernate?
+Difference between JPA and Hibernate?
+
+# 9. Retrieval Quality Test
+These questions check semantic search.
+
+How can I change the name of a Git branch?
+Rename my Git branch
+Change branch name in Git
+Git rename branch command
+How do I modify a branch name?
+
+A good retriever should return the same Git-related document for all of these.
+
+# 10. Unknown Question Test
+The chatbot should **not hallucinate** if the information isn't in the dataset.
+```text
+Who won the FIFA World Cup 2022?
+What is the capital of Japan?
+Who is Elon Musk?
+Explain Quantum Computing.
+What is Black Hole?
+How do I bake a cake?
+Latest IPL winner?
+Weather in Mumbai?
+What is ChatGPT?
+Tell me a joke.
+```
+
+Expected response:
+
+```text
+I couldn't find this information in the dataset.
+```
+
+# 11. Coding Questions
+
+```text
+Write Java code to reverse an array.
+Write Java code for Binary Search.
+Write SQL query to find duplicate records.
+Write Python code to read a CSV file.
+Write Java code to sort an ArrayList.
+Write Git command to rename a branch.
+Write HTML code for a login form.
+Write JavaScript to reverse a string.
+Write SQL query for INNER JOIN.
+Write Python code to read JSON.
+---
+
+# 12. Synonym Test
+These verify semantic retrieval beyond exact wording.
+
+```text
+Reverse an array in Java.
+Invert an array in Java
+How can I flip an array?
+How do I rename a branch?
+Change Git branch name.
+Modify branch name.
+Sort a Java list.
+Arrange elements in Java ArrayList.
+Order list in Java.
+
+# 13. Edge Cases
+
+```text
+hello
+hi
+??
+12345
+What?
+Explain.
+Tell me something.
+Can you help me?
+Java
+Git
+```
+
+---
+
+# 14. Demo Questions (Recommended)
+
+If you're presenting the project, these showcase the RAG pipeline effectively:
+
+1. What is JVM?
+2. How do I rename a Git branch?
+3. Difference between HashMap and Hashtable?
+4. How do I reverse an array in Java?
+5. Write SQL query to join two tables.
+6. What is list comprehension in Python?
+7. Difference between `==` and `===` in JavaScript.
+8. What is Spring Boot?
+9. How do I create a REST API in Spring Boot?
+10. Who won the FIFA World Cup 2022? *(should return "I couldn't find this information in the dataset.")*
+
+These questions demonstrate retrieval, semantic search, code generation (if present in your dataset), and the chatbot's ability to avoid answering questions outside its knowledge base.
