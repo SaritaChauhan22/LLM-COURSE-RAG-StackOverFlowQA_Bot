@@ -1,16 +1,19 @@
-streamlit==1.37.1
+streamlit
 
-torch==2.4.1
-transformers==4.45.2
-accelerate==0.34.2
+transformers
 
-sentence-transformers==3.0.1
+sentence-transformers
 
-langchain==0.2.16
-langchain-community==0.2.16
-langchain-huggingface==0.0.3
+langchain
 
-faiss-cpu==1.8.0.post1
+langchain-community
 
-pandas==2.2.2
-numpy==1.26.4
+langchain-huggingface
+
+pandas
+
+numpy
+
+faiss-cpu
+
+torch
