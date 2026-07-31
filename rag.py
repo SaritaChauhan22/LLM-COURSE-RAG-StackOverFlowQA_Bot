@@ -217,6 +217,7 @@
 #         return answer
 
 import os
+import numpy as np
 import pandas as pd
 
 from transformers import (
@@ -254,6 +255,47 @@ def load_seq2seq_model(model_name: str = LLM_MODEL):
     return tokenizer, model
 
 
+class SimpleRetriever:
+    def __init__(self, documents, embeddings):
+        self.documents = documents
+        self.embeddings = embeddings
+        self.embedded_documents = []
+
+        for doc in documents:
+            embedding = np.asarray(self.embeddings.embed_query(doc.page_content), dtype=np.float32)
+            self.embedded_documents.append(embedding)
+
+        if self.embedded_documents:
+            self.embedded_documents = np.vstack(self.embedded_documents)
+        else:
+            self.embedded_documents = np.empty((0, 0), dtype=np.float32)
+
+    def invoke(self, query):
+        if self.embedded_documents.size == 0:
+            return []
+
+        query_embedding = np.asarray(self.embeddings.embed_query(query), dtype=np.float32)
+
+        if self.embedded_documents.ndim != 2 or query_embedding.ndim != 1:
+            return self.documents[:TOP_K]
+
+        if self.embedded_documents.shape[1] != query_embedding.shape[0]:
+            return self.documents[:TOP_K]
+
+        query_norm = np.linalg.norm(query_embedding)
+        if query_norm < 1e-12:
+            return self.documents[:TOP_K]
+
+        query_embedding = query_embedding / query_norm
+        doc_norms = np.linalg.norm(self.embedded_documents, axis=1, keepdims=True)
+        doc_norms[doc_norms < 1e-12] = 1.0
+        normalized_docs = self.embedded_documents / doc_norms
+        scores = normalized_docs @ query_embedding
+        top_indices = np.argsort(scores)[::-1][:TOP_K]
+
+        return [self.documents[idx] for idx in top_indices]
+
+
 class RAGChatbot:
 
     def __init__(self):
@@ -264,15 +306,9 @@ class RAGChatbot:
             model_name=EMBEDDING_MODEL
         )
 
-        print("Loading Vector Store...")
-
-        self.vectorstore = self.create_vectorstore()
-
-        self.retriever = self.vectorstore.as_retriever(
-            search_kwargs={
-                "k": TOP_K
-            }
-        )
+        print("Loading documents...")
+        self.documents = self.load_documents()
+        self.retriever = SimpleRetriever(self.documents, self.embeddings)
 
         print("Loading FLAN-T5...")
 
@@ -318,29 +354,7 @@ class RAGChatbot:
     # ===================================================
 
     def create_vectorstore(self):
-
-        if os.path.exists(VECTOR_DB):
-            import shutil
-
-            print("Removing existing FAISS index to avoid version mismatch...")
-            shutil.rmtree(VECTOR_DB)
-
-        print("Creating new FAISS index...")
-
-        documents = self.load_documents()
-
-        splitter = RecursiveCharacterTextSplitter(
-            chunk_size=CHUNK_SIZE,
-            chunk_overlap=CHUNK_OVERLAP
-        )
-
-        chunks = splitter.split_documents(documents)
-
-        db = FAISS.from_documents(chunks, self.embeddings)
-
-        db.save_local(VECTOR_DB)
-
-        return db
+        return None
 
     # ===================================================
     # ASK
