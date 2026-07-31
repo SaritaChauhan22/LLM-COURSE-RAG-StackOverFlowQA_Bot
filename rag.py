@@ -217,52 +217,81 @@
 #         return answer
 
 
-
-import pandas as pd
 import os
+import pandas as pd
 
-from transformers import pipeline
+from transformers import AutoTokenizer
+from transformers import AutoModelForSeq2SeqLM
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
 
-# ==========================
-# CONFIGURATION
-# ==========================
+# ===================================================
+# CONFIG
+# ===================================================
 
 CSV_PATH = "StackOverflow_QA_Format.csv"
 
 VECTOR_DB = "vector_db"
 
-EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 LLM_MODEL = "google/flan-t5-small"
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 50
-
 TOP_K = 3
 
+CHUNK_SIZE = 500
+
+CHUNK_OVERLAP = 50
 
 
 class RAGChatbot:
 
     def __init__(self):
 
-        # ==========================
-        # LOAD CSV DATA
-        # ==========================
+        print("Loading embeddings...")
+
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name=EMBEDDING_MODEL
+        )
+
+        print("Loading Vector Store...")
+
+        self.vectorstore = self.create_vectorstore()
+
+        self.retriever = self.vectorstore.as_retriever(
+            search_kwargs={
+                "k": TOP_K
+            }
+        )
+
+        print("Loading FLAN-T5...")
+
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            LLM_MODEL
+        )
+
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(
+            LLM_MODEL
+        )
+
+        print("Ready!")
+
+    # ===================================================
+    # LOAD CSV
+    # ===================================================
+
+    def load_documents(self):
 
         df = pd.read_csv(
             CSV_PATH,
             encoding="utf-8",
+            engine="python",
             on_bad_lines="skip"
         )
-
 
         documents = []
 
@@ -271,8 +300,10 @@ class RAGChatbot:
             text = ""
 
             for col in df.columns:
-                text += f"{col}: {row[col]}\n"
 
+                value = str(row[col])
+
+                text += f"{col}: {value}\n"
 
             documents.append(
                 Document(
@@ -280,106 +311,98 @@ class RAGChatbot:
                 )
             )
 
+        return documents
 
-        # ==========================
-        # CHUNKING
-        # ==========================
+    # ===================================================
+    # VECTOR STORE
+    # ===================================================
+
+    def create_vectorstore(self):
+
+        if os.path.exists(os.path.join(VECTOR_DB, "index.faiss")):
+
+            print("Loading existing FAISS database...")
+
+            return FAISS.load_local(
+                VECTOR_DB,
+                self.embeddings,
+                allow_dangerous_deserialization=True
+            )
+
+        print("Creating FAISS database...")
+
+        documents = self.load_documents()
 
         splitter = RecursiveCharacterTextSplitter(
             chunk_size=CHUNK_SIZE,
             chunk_overlap=CHUNK_OVERLAP
         )
 
-
         chunks = splitter.split_documents(documents)
 
-
-
-        # ==========================
-        # EMBEDDINGS
-        # ==========================
-
-        embeddings = HuggingFaceEmbeddings(
-            model_name=EMBEDDING_MODEL
+        db = FAISS.from_documents(
+            chunks,
+            self.embeddings
         )
 
+        db.save_local(VECTOR_DB)
 
-        # ==========================
-        # FAISS VECTOR DATABASE
-        # ==========================
+        return db
 
-        if os.path.exists(VECTOR_DB):
-
-            self.vectorstore = FAISS.load_local(
-                VECTOR_DB,
-                embeddings,
-                allow_dangerous_deserialization=True
-            )
-
-        else:
-
-            self.vectorstore = FAISS.from_documents(
-                chunks,
-                embeddings
-            )
-
-            self.vectorstore.save_local(
-                VECTOR_DB
-            )
-
-
-        # ==========================
-        # RETRIEVER
-        # ==========================
-
-        self.retriever = self.vectorstore.as_retriever(
-            search_kwargs={
-                "k": TOP_K
-            }
-        )
-
-
-        # ==========================
-        # HUGGINGFACE LLM
-        # ==========================
-
-        self.llm = pipeline(
-            "text2text-generation",
-            model=LLM_MODEL,
-            max_new_tokens=256
-        )
-
-
+    # ===================================================
+    # ASK
+    # ===================================================
 
     def ask(self, question):
 
         docs = self.retriever.invoke(question)
 
+        if len(docs) == 0:
+
+            return "I couldn't find any relevant information."
 
         context = "\n\n".join(
-            [
-                doc.page_content
-                for doc in docs
-            ]
+            doc.page_content
+            for doc in docs
         )
-
 
         prompt = f"""
 You are a helpful StackOverflow assistant.
 
-Use the context below to answer.
+Answer ONLY using the context below.
+
+If the answer is not present in the context,
+reply:
+
+I couldn't find the answer in the dataset.
 
 Context:
+
 {context}
 
 Question:
+
 {question}
 
 Answer:
 """
 
+        inputs = self.tokenizer(
+            prompt,
+            return_tensors="pt",
+            truncation=True,
+            max_length=512
+        )
 
-        response = self.llm(prompt)
+        outputs = self.model.generate(
+            **inputs,
+            max_new_tokens=150,
+            do_sample=False
+        )
 
+        answer = self.tokenizer.decode(
+            outputs[0],
+            skip_special_tokens=True
+        )
 
-        return response[0]["generated_text"]
+        return answer.strip()

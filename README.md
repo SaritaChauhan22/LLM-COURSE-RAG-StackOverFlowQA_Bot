@@ -39,9 +39,13 @@ pip install -r requirements.txt
 
 ## Run
 
+For public access, start the app with:
+
 ```bash
-streamlit run app.py
+streamlit run app.py --server.address=0.0.0.0 --server.port=8501
 ```
+
+This makes the app reachable from any browser on the deployed host.
 
 ---
 
