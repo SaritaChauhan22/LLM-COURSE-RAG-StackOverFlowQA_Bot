@@ -239,7 +239,7 @@ VECTOR_DB = "vector_db"
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-LLM_MODEL = "google/flan-t5-base"
+LLM_MODEL = "google/flan-t5-small"
 
 TOP_K = 3
 
@@ -276,13 +276,7 @@ class RAGChatbot:
 
         print("Loading FLAN-T5...")
 
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            LLM_MODEL
-        )
-
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(
-            LLM_MODEL
-        )
+        self.tokenizer, self.model = load_seq2seq_model(LLM_MODEL)
 
         print("Ready!")
 
@@ -325,23 +319,11 @@ class RAGChatbot:
 
     def create_vectorstore(self):
 
-        index_file = os.path.join(VECTOR_DB, "index.faiss")
+        if os.path.exists(VECTOR_DB):
+            import shutil
 
-        if os.path.exists(index_file):
-            try:
-                print("Loading existing FAISS index...")
-                return FAISS.load_local(
-                    VECTOR_DB,
-                    self.embeddings,
-                    allow_dangerous_deserialization=True
-                )
-            except Exception:
-                print("FAISS index incompatible. Rebuilding...")
-
-                import shutil
-
-                if os.path.exists(VECTOR_DB):
-                    shutil.rmtree(VECTOR_DB)
+            print("Removing existing FAISS index to avoid version mismatch...")
+            shutil.rmtree(VECTOR_DB)
 
         print("Creating new FAISS index...")
 
