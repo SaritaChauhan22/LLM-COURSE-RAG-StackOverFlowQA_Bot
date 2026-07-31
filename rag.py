@@ -216,18 +216,18 @@
 
 #         return answer
 
-
 import os
 import pandas as pd
 
-from transformers import AutoTokenizer
-from transformers import AutoModelForSeq2SeqLM
+from transformers import (
+    AutoTokenizer,
+    AutoModelForSeq2SeqLM,
+)
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-
 
 # ===================================================
 # CONFIG
@@ -239,7 +239,7 @@ VECTOR_DB = "vector_db"
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-LLM_MODEL = "google/flan-t5-small"
+LLM_MODEL = "google/flan-t5-base"
 
 TOP_K = 3
 
@@ -325,17 +325,25 @@ class RAGChatbot:
 
     def create_vectorstore(self):
 
-        if os.path.exists(os.path.join(VECTOR_DB, "index.faiss")):
+        index_file = os.path.join(VECTOR_DB, "index.faiss")
 
-            print("Loading existing FAISS database...")
+        if os.path.exists(index_file):
+            try:
+                print("Loading existing FAISS index...")
+                return FAISS.load_local(
+                    VECTOR_DB,
+                    self.embeddings,
+                    allow_dangerous_deserialization=True
+                )
+            except Exception:
+                print("FAISS index incompatible. Rebuilding...")
 
-            return FAISS.load_local(
-                VECTOR_DB,
-                self.embeddings,
-                allow_dangerous_deserialization=True
-            )
+                import shutil
 
-        print("Creating FAISS database...")
+                if os.path.exists(VECTOR_DB):
+                    shutil.rmtree(VECTOR_DB)
+
+        print("Creating new FAISS index...")
 
         documents = self.load_documents()
 
@@ -346,10 +354,7 @@ class RAGChatbot:
 
         chunks = splitter.split_documents(documents)
 
-        db = FAISS.from_documents(
-            chunks,
-            self.embeddings
-        )
+        db = FAISS.from_documents(chunks, self.embeddings)
 
         db.save_local(VECTOR_DB)
 
@@ -363,35 +368,36 @@ class RAGChatbot:
 
         docs = self.retriever.invoke(question)
 
-        if len(docs) == 0:
-
-            return "I couldn't find any relevant information."
+        if not docs:
+            return "I couldn't find any relevant information in the dataset."
 
         context = "\n\n".join(
-            doc.page_content
-            for doc in docs
+            [doc.page_content for doc in docs]
         )
 
         prompt = f"""
-You are a helpful StackOverflow assistant.
+    You are an experienced software engineer and Stack Overflow expert.
 
-Answer ONLY using the context below.
+    Use ONLY the information available in the retrieved context.
 
-If the answer is not present in the context,
-reply:
+    Retrieved Context:
+    {context}
 
-I couldn't find the answer in the dataset.
+    User Question:
+    {question}
 
-Context:
+    Instructions:
+    - Answer in 5-8 complete sentences.
+    - Explain the concept clearly.
+    - Provide the correct solution.
+    - Mention best practices.
+    - If the retrieved context contains code, include it.
+    - Do not invent information outside the retrieved context.
+    - If the context is insufficient, say:
+    "I couldn't find enough information in the dataset."
 
-{context}
-
-Question:
-
-{question}
-
-Answer:
-"""
+    Answer:
+    """
 
         inputs = self.tokenizer(
             prompt,
@@ -402,8 +408,9 @@ Answer:
 
         outputs = self.model.generate(
             **inputs,
-            max_new_tokens=150,
-            do_sample=False
+            max_new_tokens=220,
+            temperature=0.3,
+            do_sample=True
         )
 
         answer = self.tokenizer.decode(
