@@ -372,28 +372,21 @@ class RAGChatbot:
         )
 
         prompt = f"""
-    You are an experienced software engineer and Stack Overflow expert.
+        You are a Stack Overflow expert.
 
-    Use ONLY the information available in the retrieved context.
+        Below is an existing Stack Overflow answer.
 
-    Retrieved Context:
-    {context}
+        Rewrite it in a clearer way.
 
-    User Question:
-    {question}
+        Question:
+        {question}
 
-    Instructions:
-    - Answer in 5-8 complete sentences.
-    - Explain the concept clearly.
-    - Provide the correct solution.
-    - Mention best practices.
-    - If the retrieved context contains code, include it.
-    - Do not invent information outside the retrieved context.
-    - If the context is insufficient, say:
-    "I couldn't find enough information in the dataset."
+        Existing Answer:
+        {context}
 
-    Answer:
-    """
+        Do not change the meaning.
+        Expand only if needed.
+        """
 
         inputs = self.tokenizer(
             prompt,
