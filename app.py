@@ -17,7 +17,11 @@ st.write(
 def load_bot():
     return RAGChatbot()
 
-bot = load_bot()
+try:
+    bot = load_bot()
+except Exception as exc:
+    st.error(f"The chatbot could not start: {exc}")
+    st.stop()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
