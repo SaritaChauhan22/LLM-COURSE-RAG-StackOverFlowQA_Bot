@@ -248,6 +248,12 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
 
+def load_seq2seq_model(model_name: str = LLM_MODEL):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+    return tokenizer, model
+
+
 class RAGChatbot:
 
     def __init__(self):
